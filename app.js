@@ -107,3 +107,14 @@ window.location=
 }
 
 render(cars);
+function reserve(carName){
+
+window.open(
+
+`https://wa.me/2348012345678?text=Hello,%20I%20want%20to%20reserve%20the%20${encodeURIComponent(carName)}.`,
+
+"_blank"
+
+);
+
+}
