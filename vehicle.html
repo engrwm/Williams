@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+
+Tesla Details
+
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+TESLA SALES HUB
+
+</div>
+
+</nav>
+
+<section class="page">
+
+<div id="details">
+
+</div>
+
+</section>
+
+<script>
+
+const cars=[
+
+{
+id:1,
+name:"Tesla Model S",
+price:"$78000",
+range:"652 km",
+speed:"2.1 sec",
+color:"Ultra Red",
+image:
+"https://images.unsplash.com/photo-1560958089"
+},
+
+{
+id:2,
+name:"Tesla Model 3",
+price:"$48000",
+range:"513 km",
+speed:"4.4 sec",
+color:"Grey",
+image:
+"https://images.unsplash.com/photo-1553440569"
+},
+
+{
+id:3,
+name:"Tesla Model X",
+price:"$92000",
+range:"560 km",
+speed:"2.6 sec",
+color:"White",
+image:
+"https://images.unsplash.com/photo-1502877338535"
+},
+
+{
+id:4,
+name:"Tesla Model Y",
+price:"$56000",
+range:"533 km",
+speed:"3.5 sec",
+color:"Black",
+image:
+"https://images.unsplash.com/photo-1492144534655"
+}
+
+];
+
+const id=
+new URLSearchParams(
+window.location.search
+)
+.get(
+"id"
+);
+
+const car=
+cars.find(
+v=>
+v.id==id
+);
+
+document
+.getElementById(
+"details"
+)
+
+.innerHTML=`
+
+<div class="details-card">
+
+<img
+src="${car.image}"
+class="hero-car">
+
+<h1>
+
+${car.name}
+
+</h1>
+
+<h2>
+
+${car.price}
+
+</h2>
+
+<p>
+
+Range:
+${car.range}
+
+</p>
+
+<p>
+
+0–100:
+${car.speed}
+
+</p>
+
+<p>
+
+Color:
+${car.color}
+
+</p>
+
+<form
+onsubmit="reserve(event)">
+
+<input
+id="customer"
+placeholder="Full Name"
+required>
+
+<input
+id="phone"
+placeholder="Phone Number"
+required>
+
+<button>
+
+Reserve Vehicle
+
+</button>
+
+</form>
+
+</div>
+
+`;
+
+function reserve(e){
+
+e.preventDefault();
+
+let name=
+document
+.getElementById(
+"customer"
+)
+.value;
+
+let phone=
+document
+.getElementById(
+"phone"
+)
+.value;
+
+alert(
+
+`
+Reservation Successful
+
+Customer:
+${name}
+
+Phone:
+${phone}
+
+Vehicle:
+${car.name}
+
+Our sales team will contact you.
+`
+
+);
+
+}
+
+</script>
+
+</body>
+
+</html>
