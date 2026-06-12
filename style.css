@@ -439,18 +439,3 @@ border:none;
 cursor:pointer;
 
 }
-/* Target all links on the page */
-a {
-    color: #ffffff; /* Changes links to bright white */
-    text-decoration: none; /* Optional: removes the default underline */
-}
-
-/* Target links when they have been visited so they don't turn dark purple */
-a:visited {
-    color: #e0e0e0; /* A slightly softer white/light gray */
-}
-
-/* Optional: Add a hover effect for better interactivity */
-a:hover {
-    color: #ff0000; /* Turns red when hovered, matching your "TESLA SALES HUB" header */
-}
