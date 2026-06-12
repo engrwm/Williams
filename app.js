@@ -42,7 +42,7 @@ name:"Tesla Model Y",
 price:"$56,000",
 range:"533 km",
 speed:"3.5 sec",
-color:"Blue",
+color:"Blue", 
 
 image:
 "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80"
