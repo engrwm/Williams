@@ -1,82 +1,47 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tesla Sales Hub</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Sales Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav>
+    <header class="navbar">
+        <div class="logo">TESLA <span>SALES HUB</span></div>
+        
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+        </button>
 
-<div class="nav-container">
-
-<div class="logo">
-
-TESLA SALES HUB
-
-</div>
-
-<div class="nav-links">
-
-<a
-class="active"
-href="index.html">
-
-Home
-
-</a>
-
-<a
-href="inventory.html">
-
-Inventory
-
-</a>
-
-<a
-href="about.html">
-
-About
-
-</a>
-
-<a
-href="contact.html">
-
-Contact
-
-</a>
-
-</div>
-
-</div>
-
+        <nav class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="inventory.html">Inventory</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
-<header class="hero">
+    </header>
 
-<h1>Drive The Future</h1>
-
-<p>
-Premium Tesla inventory for modern drivers
-</p>
-
-<a href="inventory.html">
-
-<button>
-
-Explore Vehicles
-
-</button>
-
+    <main class="hero" id="home">
+        <div class="bg-gradient"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Drive The Future</h1>
+            <p class="hero-subtitle">Premium Tesla inventory curated for modern drivers.</p>
+            <a href="inventory.html" class="btn-primary">
+    Explore Vehicles
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
 </a>
 
-</header>
+        </div>
+    </main>
 
+    <script src="app.js"></script>
 </body>
-
 </html>

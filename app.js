@@ -1,3 +1,44 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-links a');
+
+    // 1. Mobile Menu Toggle Logic
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        
+        // Animated hamburger into an 'X'
+        const spans = menuToggle.querySelectorAll('span');
+        spans[0].style.transform = navLinks.classList.contains('active') ? 'rotate(45deg) translate(5px, 6px)' : 'none';
+        spans[1].style.transform = navLinks.classList.contains('active') ? 'rotate(-45deg) translate(5px, -6px)' : 'none';
+    });
+
+    // 2. Active Link Switching & Smooth Closing of Mobile Menu
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navItems.forEach(nav => nav.classList.remove('active'));
+            item.classList.add('active');
+
+            // Collapse menu on mobile after selection
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                menuToggle.querySelectorAll('span').forEach(span => span.style.transform = 'none');
+            }
+        });
+    });
+
+    // 3. Optional: Subtle Dynamic Header Shrinking on scroll
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.padding = '15px 8%';
+            navbar.style.background = 'rgba(10, 10, 10, 0.9)';
+        } else {
+            navbar.style.padding = '25px 8%';
+            navbar.style.background = 'rgba(10, 10, 10, 0.75)';
+        }
+    });
+});
 const cars=[
 
 {
